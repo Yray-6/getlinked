@@ -51,23 +51,31 @@ function Sections() {
   return (
     <>
       <div
-        id="Overview"
-        className="lg:pl-28 lg:pr-0 px-7 pt-52  border-b border-gray-800  lg:pb-[95px] text overflow-x-clip"
+        id="overview"
+        className="lg:pl-28 lg:pr-0 px-7 pt-52  border-b border-gray-800  lg:pb-[80px] relative text overflow-x-clip"
       >
+        <p className="text-white lg:text-3xl text-[1.0rem] md:text-[1.5rem] italic absolute font-bold lg:top-[18%] md:top-[-470px] top-[10%] right-[2%]">
+          Igniting a Revolution in HR Innovation
+        </p>
+        <img
+          src={curve}
+          alt=""
+          className="absolute lg:top-[23%] top-[12.5%] md:top-[-435px] right-[3%] lg:w-72 md:w-32  w-28"
+        />
         <div className="text-white lg:grid lg:grid-cols-2">
           <div className=" lg:col-span-1 text-center lg:text-left">
-            <p className="lg:text-6xl text-4xl max-w-sm md:max-w-none lg:max-w-none font-bold text-center lg:pr-0 pr-9 md:pr-0 lg:text-left lg:mt-24  relative leading-tight">
+            <p className="lg:text-6xl text-3xl  md:max-w-none lg:max-w-none font-bold text-center lg:pr-0 pr-9 md:pr-0 lg:text-left lg:mt-24  relative leading-tight">
               getlinked Tech <br /> Hackathon{" "}
               <span className="text-secondary-300 pr-12">1.0</span>
               <img
                 src={chain}
                 alt=""
-                className="absolute lg:top-[3.6rem] top-12 lg:w-[3.7rem] w-10 lg:left-[410px] right-[15%] md:right-[30%]"
+                className="absolute lg:top-[3.6rem] top-[50%] lg:w-[3.7rem] w-9 lg:left-[410px] right-[15%] md:right-[30%]"
               />
               <img
                 src={bomb}
                 alt=""
-                className="absolute lg:top-[3.6rem] top-12 w-8 lg:w-[3.7rem] right-[8%] md:right-[25%] lg:left-[460px]"
+                className="absolute lg:top-[3.6rem] top-[50%] w-8 lg:w-[3.7rem] right-[7%] md:right-[25%] lg:left-[460px]"
               />
               <img
                 src={creative}
@@ -101,7 +109,7 @@ function Sections() {
             <img
               src={countdown}
               alt=""
-              className=" lg:w-60 w-56 mt-12 ml-[20%] md:mb-12 md:ml-[35%] lg:ml-0"
+              className=" lg:w-60 w-56 mt-12 ml-[15%] md:mb-12 md:ml-[35%] lg:ml-0"
             />
             <img
               src={purple}
@@ -125,14 +133,7 @@ function Sections() {
               alt=""
               className="absolute -z-10 w-[900px] right-0 -top-[10px] blur-xl"
             />
-            <p className="text-white lg:text-3xl text-[1.1rem] md:text-[1.5rem] italic absolute font-bold lg:top-[-18%] md:top-[-470px] top-[-500px] right-[2%]">
-              Igniting a Revolution in HR Innovation
-            </p>
-            <img
-              src={curve}
-              alt=""
-              className="absolute lg:top-[-10.5%] top-[-470px] md:top-[-435px] right-[3%] lg:w-52 md:w-32  w-28"
-            />
+
             <img
               src={star}
               alt=""
@@ -148,10 +149,14 @@ function Sections() {
       </div>
       <div className="lg:grid overflow-x-clip lg:grid-cols-2 mt-16 lg:px-28 px-7 text-white pb-16 border-b border-gray-700">
         <div className=" col-span-1 relative">
-          <img src={bigidea} alt="" className="w-[530px] lg:pl-16 md:ml-20 lg:ml-0 px-8" />
-          <p className=" lg:text-2xl text-xl font-bold text-center absolute z-10 lg:top-52 top-[45%] left-[40%] md:left-[42%] md:text-2xl lg:left-[43%]">
+          <img
+            src={bigidea}
+            alt=""
+            className="w-[530px]  lg:pl-16 md:ml-20 lg:ml-0 px-8"
+          />
+          {/* <p className=" lg:text-2xl text-lg  font-bold text-center absolute z-10 lg:top-52 top-[45%] left-[39%] md:left-[42%] md:text-2xl lg:left-[43%]">
             The Big <br /> idea!
-          </p>
+          </p> */}
           <img
             src={arrow}
             alt=""
@@ -313,7 +318,7 @@ function Sections() {
         </div>
       </div>
       <div
-        id="FAQs"
+        id="faqs"
         className="grid overflow-x-clip lg:grid-cols-10 lg:px-28 px-7 lg:pt-24 relative text-white border-b border-gray-700 pb-16"
       >
         <div className="col-span-4 lg:pl-16 mt-20">
@@ -327,7 +332,6 @@ function Sections() {
             about getlinked Hackathon 1.0
           </p>
 
-        
           <div className="border-b relative border-secondary-300 py-4 overflow-hidden">
             <p onClick={() => toggleMenu(0)} className="text-sm  mb-1 flex ">
               <span>
@@ -339,101 +343,91 @@ function Sections() {
                 alt=""
                 className={`w-3 h-3 ml-5 right-0 absolute mt-1 transform ${
                   open[0] ? "rotate-45" : "rotate-0"
-                } transition-transform duration-300 ease-in-out`}
+                } transition-transform duration-100 ease-in-out`}
               />{" "}
-            </p>  
+            </p>
             <div
               className={`${
                 open[0] ? "h-auto py-3" : "h-0 overflow-hidden"
-              } transition-max-height duration-300 ease-out`}
+              } transition-max-height duration-100 ease-out`}
             >
               <p>I dont think i'll do that .. Y-Ray doesnt cheat</p>
             </div>{" "}
           </div>
           <div className="border-b relative border-secondary-300 py-4 overflow-hidden">
-          <p onClick={() => toggleMenu(1)} className="text-sm  mb-1 flex ">
-            <span>
-              {" "}
-              What happens if I need help during the hackathon?
-            </span>
-            <img
-              src={plus}
-              alt=""
-              className={`w-3 h-3 ml-5 right-0 absolute mt-1 transform ${
-                open[1] ? "rotate-45" : "rotate-0"
-              } transition-transform duration-300 ease-in-out`}
-            />{" "}
-          </p>  
-          <div
-            className={`${
-              open[1] ? "h-auto py-3" : "h-0 overflow-hidden"
-            } transition-max-height duration-300 ease-out`}
-          >
-            <p>Yray na Idan .. I work alone!!</p>
-          </div>{" "}
-        </div>
-        <div className="border-b relative border-secondary-300 py-4 overflow-hidden">
+            <p onClick={() => toggleMenu(1)} className="text-sm  mb-1 flex ">
+              <span> What happens if I need help during the hackathon?</span>
+              <img
+                src={plus}
+                alt=""
+                className={`w-3 h-3 ml-5 right-0 absolute mt-1 transform ${
+                  open[1] ? "rotate-45" : "rotate-0"
+                } transition-transform duration-100 ease-in-out`}
+              />{" "}
+            </p>
+            <div
+              className={`${
+                open[1] ? "h-auto py-3" : "h-0 overflow-hidden"
+              } transition-max-height duration-100 ease-out`}
+            >
+              <p>Yray na Idan .. I work alone!!</p>
+            </div>{" "}
+          </div>
+          <div className="border-b relative border-secondary-300 py-4 overflow-hidden">
             <p onClick={() => toggleMenu(2)} className="text-sm  mb-1 flex ">
-              <span>
-                {" "}
-                What happens if I don't have an idea for a project?
-              </span>
+              <span> What happens if I don't have an idea for a project?</span>
               <img
                 src={plus}
                 alt=""
                 className={`w-3 h-3 ml-5 right-0 absolute mt-1 transform ${
                   open[2] ? "rotate-45" : "rotate-0"
-                } transition-transform duration-300 ease-in-out`}
+                } transition-transform duration-100 ease-in-out`}
               />{" "}
-            </p>  
+            </p>
             <div
               className={`${
                 open[2] ? "h-auto py-3" : "h-0 overflow-hidden"
-              } transition-max-height duration-300 ease-out`}
+              } transition-max-height duration-100 ease-out`}
             >
               <p>lol.. are we playing here? Yray is an idea bank</p>
             </div>{" "}
           </div>
           <div className="border-b relative border-secondary-300 py-4 overflow-hidden">
             <p onClick={() => toggleMenu(3)} className="text-sm  mb-1 flex ">
-              <span>
-                {" "}
-                Can I join a team or do I have to come with one?
-              </span>
+              <span> Can I join a team or do I have to come with one?</span>
               <img
                 src={plus}
                 alt=""
                 className={`w-3 h-3 ml-5 right-0 absolute mt-1 transform ${
                   open[3] ? "rotate-45" : "rotate-0"
-                } transition-transform duration-300 ease-in-out`}
+                } transition-transform duration-100 ease-in-out`}
               />{" "}
-            </p>  
+            </p>
             <div
               className={`${
                 open[3] ? "h-auto py-3" : "h-0 overflow-hidden"
-              } transition-max-height duration-300 ease-out`}
+              } transition-max-height duration-100 ease-out`}
             >
-              <p>Any team will be priviledged to have me . but i'll work alone</p>
+              <p>
+                Any team will be priviledged to have me . but i'll work alone
+              </p>
             </div>{" "}
           </div>
           <div className="border-b relative border-secondary-300 py-4 overflow-hidden">
             <p onClick={() => toggleMenu(4)} className="text-sm  mb-1 flex ">
-              <span>
-                {" "}
-                What happens after the hackathon ends
-              </span>
+              <span> What happens after the hackathon ends</span>
               <img
                 src={plus}
                 alt=""
                 className={`w-3 h-3 ml-5 right-0 absolute mt-1 transform ${
                   open[4] ? "rotate-45" : "rotate-0"
-                } transition-transform duration-300 ease-in-out`}
+                } transition-transform duration-100 ease-in-out`}
               />{" "}
-            </p>  
+            </p>
             <div
               className={`${
                 open[4] ? "h-auto py-3" : "h-0 overflow-hidden"
-              } transition-max-height duration-300 ease-out`}
+              } transition-max-height duration-100 ease-out`}
             >
               <p>I go home with my trophy and do my victory dance</p>
             </div>{" "}
@@ -449,13 +443,13 @@ function Sections() {
                 alt=""
                 className={`w-3 h-3 ml-5 right-0 absolute mt-1 transform ${
                   open[5] ? "rotate-45" : "rotate-0"
-                } transition-transform duration-300 ease-in-out`}
+                } transition-transform duration-100 ease-in-out`}
               />{" "}
-            </p>  
+            </p>
             <div
               className={`${
                 open[5] ? "h-auto py-3" : "h-0 overflow-hidden"
-              } transition-max-height duration-300 ease-out`}
+              } transition-max-height duration-100 ease-out`}
             >
               <p>this is an accordion lets test it!!!!!</p>
             </div>{" "}
@@ -496,7 +490,7 @@ function Sections() {
           <img
             src={question}
             alt=""
-            className="absolute lg:top-[-5%] top-[60px] lg:w-16 w-6 lg:right-[58%] right-[30%]"
+            className="absolute lg:top-[-5%] top-[60px] lg:w-16 w-6 -z-10 lg:right-[58%] right-[30%]"
           />
           <img
             src={question}
@@ -506,7 +500,7 @@ function Sections() {
         </div>
       </div>
       <div
-        id="Timeline"
+        id="timeline"
         className="text-white overflow-x-hidden lg:px-44 px-7 lg:py-20 "
       >
         <div className="mb-20 text-center">
@@ -644,39 +638,19 @@ function Sections() {
             className="absolute  top-[820px] brightness-50 w-5"
           />
         </div>
-        <div className="grid grid-cols-10 relative pb-9 lg:hidden px-3">
-          <div className="col-span-1">
-            <div className="h-28 w-5 ml-4  border-l-4 border-secondary-300"></div>
-            <div className="primarys rounded-full w-8  pl-3 p-1 font-bold my-2">
-              1
+        <div className=" relative pb-9 lg:hidden px-3">
+          <div className="grid grid-cols-10">
+            <div className="col-span-1">
+              <div className="h-28 w-5 ml-4  border-l-4 border-secondary-300"></div>
+              <div className="primarys rounded-full w-8  pl-3 p-1 font-bold my-2">
+                1
+              </div>
             </div>
-            <div className="h-28 w-5 ml-4  border-l-4 mt-8 border-secondary-300"></div>
-            <div className="primarys rounded-full w-8  pl-3 p-1 font-bold my-2">
-              2
-            </div>
-            <div className="h-28 w-5 ml-4  border-l-4 mt-8 border-secondary-300"></div>
-            <div className="primarys rounded-full w-8  pl-3 p-1 font-bold my-2">
-              3
-            </div>
-            <div className="h-28 w-5 ml-4  border-l-4 mt-8 border-secondary-300"></div>
-            <div className="primarys rounded-full w-8  pl-3 p-1 font-bold my-2">
-              4
-            </div>
-            <div className="h-28 w-5 ml-4  border-l-4 mt-8 border-secondary-300"></div>
-            <div className="primarys rounded-full w-8  pl-3 p-1 font-bold my-2">
-              5
-            </div>
-            <div className="h-28 w-5 ml-4  border-l-4 mt-8 border-secondary-300"></div>
-            <div className="primarys rounded-full w-8  pl-3 p-1 font-bold my-2">
-              6
-            </div>
-          </div>
-          <div className="col-span-9 lg:col-span-4 ml-5">
-            <div className="mb-8">
+            <div className="mb-8 pl-4 col-span-9">
               <p className="text-secondary-300  mb-2 text-base font-bold">
                 Hackathon Announcement
               </p>
-              <p className="text-sm leading-6 md:text-base mb-5 md:mb-10">
+              <p className="text-sm leading-6 md:text-base mb-2 md:mb-10">
                 The getlinked tech hackathon 1.0 is formally announced to the
                 general public and teams begin to get ready to register
               </p>
@@ -684,11 +658,19 @@ function Sections() {
                 November 18, 2023
               </p>
             </div>
-            <div className="mb-10">
+          </div>
+          <div className="grid grid-cols-10">
+            <div className="col-span-1">
+              <div className="h-28 w-5 ml-4  border-l-4 border-secondary-300"></div>
+              <div className="primarys rounded-full w-8  pl-3 p-1 font-bold my-2">
+                2
+              </div>
+            </div>
+            <div className="mb-8 pl-4 col-span-9">
               <p className="text-secondary-300  mb-2 text-base font-bold">
                 Teams Registration begins
               </p>
-              <p className="text-sm leading-6 md:text-base mb-5 md:mb-12">
+              <p className="text-sm leading-6 md:text-base mb-2 md:mb-12">
                 Interested teams can now show their interest in the getlinked
                 tech hackathon 1.0 2023 by proceeding to register
               </p>
@@ -696,22 +678,38 @@ function Sections() {
                 November 18, 2023
               </p>
             </div>
-            <div className="mb-9">
+          </div>
+          <div className="grid grid-cols-10 mb-2">
+            <div className="col-span-1">
+              <div className="h-28 w-5 ml-4  border-l-4 border-secondary-300"></div>
+              <div className="primarys rounded-full w-8  pl-3 p-1 font-bold my-2">
+                3
+              </div>
+            </div>
+            <div className="mb-8 pl-4 col-span-9">
               <p className="text-secondary-300  mb-2 text-base font-bold">
                 Teams Registration ends
               </p>
-              <p className="text-sm leading-6 md:text-base mb-10 md:mb-16">
+              <p className="text-sm leading-6 md:text-base mb-6 md:mb-16">
                 Interested Participants are no longer Allowed to register
               </p>
               <p className="text-secondary-300   text-base font-bold">
                 November 18, 2023
               </p>
             </div>
-            <div className="mb-7">
+          </div>
+          <div className="grid grid-cols-10">
+            <div className="col-span-1">
+              <div className="h-28 w-5 ml-4  border-l-4 border-secondary-300"></div>
+              <div className="primarys rounded-full w-8  pl-3 p-1 font-bold my-2">
+                4
+              </div>
+            </div>
+            <div className="mb-8 pl-4 col-span-9">
               <p className="text-secondary-300   text-base font-bold">
                 Announcement of the accepted teams and ideas
               </p>
-              <p className="text-sm md:text-base leading-6 mb-3 md:mb-12">
+              <p className="text-sm md:text-base leading-6 mb-1 md:mb-12">
                 All teams whom idea has been accepted into getlinked tech
                 hackathon 1.0 2023 are formally announced
               </p>
@@ -719,11 +717,19 @@ function Sections() {
                 November 18, 2023
               </p>
             </div>
-            <div className="mb-7 md:mb-10">
+          </div>
+          <div className="grid grid-cols-10">
+            <div className="col-span-1">
+              <div className="h-28 w-5 ml-4  border-l-4 border-secondary-300"></div>
+              <div className="primarys rounded-full w-8  pl-3 p-1 font-bold my-2">
+                5
+              </div>
+            </div>
+            <div className="mb-8 pl-4 col-span-9">
               <p className="text-secondary-300  mb-1 text-base font-bold">
                 Getlinked Hackathon 1.0 Offically Begins
               </p>
-              <p className="text-sm md:text-base leading-6 mb-7 md:mb-16">
+              <p className="text-sm md:text-base leading-6 mb-3 md:mb-16">
                 Accepted teams can now proceed to build their ground breaking
                 skill driven solutions
               </p>
@@ -731,11 +737,19 @@ function Sections() {
                 November 18, 2023
               </p>
             </div>
-            <div className="mb-10">
+          </div>
+          <div className="grid grid-cols-10">
+            <div className="col-span-1">
+              <div className="h-28 w-5 ml-4  border-l-4 border-secondary-300"></div>
+              <div className="primarys rounded-full w-8  pl-3 p-1 font-bold my-2">
+                6
+              </div>
+            </div>
+            <div className="mb-8 pl-4 col-span-9">
               <p className="text-secondary-300   text-base font-bold">
                 Demo Day
               </p>
-              <p className="text-sm md:text-base leading-6 md:mb-12 mb-3">
+              <p className="text-sm md:text-base leading-6 md:mb-12 mb-1">
                 Teams get the opportunity to pitch their projects to judges. The
                 winner of the hackathon will also be announced on this day
               </p>
@@ -744,6 +758,7 @@ function Sections() {
               </p>
             </div>
           </div>
+
           <img
             src={starsmaller}
             alt=""
@@ -777,8 +792,12 @@ function Sections() {
           </div>
         </div>
         <div className="lg:grid lg:grid-cols-5 mt-20">
-          <div className="col-span-2 lg:pr-7 relative">
-            <img src={trophy} alt="" className="w-[100%] z-20 px-5 md:px-16 relative" />
+          <div className="col-span-2 lg:pr-3 relative">
+            <img
+              src={trophy}
+              alt=""
+              className="w-[100%] z-20 px-5 md:px-16 relative"
+            />
             <img
               src={star}
               alt=""
@@ -800,44 +819,49 @@ function Sections() {
               className="absolute lg:top-[-40px] lg:left-[-50px] top-[-70%] left-[-40%] blur-3xl "
             />
           </div>
-          <div className="col-span-3  lg:mb-0 mt-28 px-8 mb-72  lg:mt-0 relative lg:pl-2">
-            <div className="absolute lg:top-[30%] top-[25px]  lg:w-[25%] w-[27%] h-[300px] lg:h-auto">
-              <img
-                src={silver}
-                alt=""
-                className="absolute z-10 w-[300px] lg:w-full"
-              />
-              <div className="absolute lg:top-[80px] lg:left-[20px] top-[20%]  lg:pt-24 lg:pb-8 lg:px-2 left-[-10%] px-[22%] pt-[50%] pb-[30%] rounded text-center border border-secondary-300 bg-secondary-400">
-                <p className="lg:text-3xl text-sm font-bold">2nd</p>
-                <p className="lg:text-xl text-sm font-bold mb-2">Runner</p>
-                <p className="text-secondary-300 lg:text-2xl text-xs font-bold">
-                  N300,000
-                </p>
+          <div className="col-span-3 grid grid-cols-3 lg:mb-0 mt-40 md:mt-72 px-4 lg:px-8 mb-10  lg:mt-40 lg:pl-2">
+            <div className="col-span-1 relative">
+              <div className="mr-2 md:mx-auto md:w-[80%]">
+                <img
+                  src={silver}
+                  alt=""
+                  className="absolute z-10 w-[90%] md:w-[75%] md:top-[-35%] mx-auto  top-[-30%]"
+                />
+                <div className="px-[5%] pt-[50%] pb-[30%] rounded-lg text-center border border-secondary-300 bg-secondary-400">
+                  <p className="lg:text-3xl text-sm md:text-2xl font-semibold ">2nd</p>
+                  <p className="lg:text-xl text-sm font-semibold md:text-2xl mb-2">Runner</p>
+                  <p className="text-secondary-300 lg:text-2xl md:text-2xl text-xs font-bold">
+                    N300,000
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="absolute lg:top-[5%] lg:right-[38%] right-[29%] w-[38%]">
-              <img src={gold} alt="" className="absolute z-10" />
-              <div className="absolute lg:top-[165px] lg:left-[35px]   lg:pt-24 lg:pb-8 lg:px-4 left-[11%] top-[70px] px-[15%] pt-[50%] pb-[20%] rounded text-center border border-secondary-200 bg-secondary-500">
-                <p className="lg:text-3xl text-sm font-bold">1st</p>
-                <p className="lg:text-xl text-sm font-bold mb-6">Runner</p>
-                <p className="text-secondary-200 text-sm lg:text-2xl font-bold">
-                  N400,000
-                </p>
+            <div className="col-span-1 relative">
+              <div className="mx-auto">
+                <img src={gold} alt="" className="absolute z-10 max-w-[130%] md:max-w-[120%] lg:w-[100%] md:left-[-10%] md:top-[-60%] lg:top-[-50%] lg:left-0 left-[-15%] top-[-45%]" />
+                <div className=" px-[15%] pt-[50%] pb-[20%] lg:px-[5%] rounded-lg text-center border border-secondary-200 bg-secondary-500">
+                  <p className="lg:text-3xl text-sm mt-2 md:text-2xl font-semibold">1st</p>
+                  <p className="lg:text-xl text-sm md:text-2xl font-semibold mb-6">Runner</p>
+                  <p className="text-secondary-200 text-sm md:text-2xl lg:text-2xl font-bold">
+                    N400,000
+                  </p>
+                </div>
               </div>
             </div>
-
-            <div className="absolute lg:top-[30%] right-[5%] top-[25px]  lg:w-[25%] w-[27%] h-[300px] lg:h-auto">
-              <img
-                src={bronze}
-                alt=""
-                className="absolute z-10 w-[300px] lg:w-full"
-              />
-              <div className="absolute lg:top-[70px] lg:left-[-20px] top-[20%]  lg:pt-24 lg:pb-8 lg:px-9 left-[5%] px-[22%] pt-[50%] pb-[30%] rounded text-center border border-secondary-300 bg-secondary-400">
-                <p className="lg:text-3xl text-sm font-bold">3rd</p>
-                <p className="lg:text-xl text-sm font-bold mb-2">Runner</p>
-                <p className="text-secondary-300 lg:text-2xl text-xs font-bold">
-                  N150,000
-                </p>
+            <div className="col-span-1 relative">
+              <div className="ml-2 md:mx-auto md:w-[80%]">
+                <img
+                  src={bronze}
+                  alt=""
+                  className="absolute z-10 w-[90%] md:w-[75%] md:top-[-35%] mx-auto top-[-30%]"
+                />
+                <div className=" px-[22%] pt-[50%] pb-[30%] rounded text-center border border-secondary-300 bg-secondary-400">
+                  <p className="lg:text-3xl text-sm md:text-2xl font-bold">3rd</p>
+                  <p className="lg:text-xl text-sm md:text-2xl font-bold mb-2">Runner</p>
+                  <p className="text-secondary-300 md:text-2xl lg:text-2xl text-xs font-bold">
+                    N150,000
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -856,11 +880,11 @@ function Sections() {
               alt=""
               className="w-5 brightness-50 lg:right-[280px] right-[100px] lg:top-[450px] top-[290px] absolute"
             />
-            <img
+            {/* <img
               src={purple}
               alt=""
-              className="blur-xl absolute right-[-350px] top-[00px]"
-            />
+              className="blur-xl absolute right-[-350px]"
+            /> */}
           </div>
         </div>
       </div>
@@ -941,7 +965,7 @@ function Sections() {
           className="absolute lg:right-[-300px] lg:top-[200px] right-[-70px] -z-10 blur-3xl"
         />
       </div>
-      <div className="grid lg:grid-cols-2 relative text-center lg:text-left overflow-x-clip text-white lg:px-36 px-7 pt-24 pb-44 lg:pb-32">
+      <div className="grid lg:grid-cols-2 relative lg:my-0 text-center lg:text-left overflow-x-clip text-white lg:px-36 px-7 pt-24 pb-44 lg:pb-32">
         <div className="col-span-1 lg:mt-16 mt-6">
           <div className="">
             <p className="lg:text-3xl text-[1.3rem] font-extrabold   mb-5">
@@ -955,7 +979,7 @@ function Sections() {
               it’s our aim to always take of our participant
             </p>
           </div>
-          <div className="border border-secondary-300 relative z-10 lg:px-16 px-6 mx-2 lg:mx-0 pt-16 pb-8 rounded bg-secondary-400">
+          <div className="border border-secondary-300 relative z-10 lg:px-16 px-6 mx-2 lg:mx-0 pt-16 pb-8 md:mb-[10%] rounded bg-secondary-400">
             <p className="text-sm leading-6 mb-4">
               At getlinked tech Hackathon 1.0, we value your privacy and are
               committed to protecting your personal information. This Privacy
@@ -968,7 +992,7 @@ function Sections() {
               Licensing Policy
             </p>
             <p className="font-bold">Here are terms of our Standard License:</p>
-            <div className=" align-top text-left flex mt-5">
+            <div className=" align-top text-left flex mt-5 ">
               <div className="w-[50px]">
                 {" "}
                 <img src={tick} alt="" className="mt-1" />
@@ -991,7 +1015,7 @@ function Sections() {
                 sites, for your project developement
               </p>
             </div>
-            <div className="text-center">
+            <div className="text-center ">
               <button className="px-12 font-semibold py-3 primarys text-sm mt-10 rounded-sm ">
                 Read More
               </button>
@@ -1019,11 +1043,11 @@ function Sections() {
           />
         </div>
         <div className="col-span-1 relative px-5">
-          <img src={lock} alt="" className="lg:w-[80%]  lg:ml-[15%] mt-10" />
+          <img src={lock} alt="" className="lg:w-[80%] md:w-[60%]  lg:ml-[15%] mt-10" />
           <img
             src={manlock}
             alt=""
-            className="absolute lg:top-[26%] top-[40%] w-[80%] left-[10%]"
+            className="absolute lg:top-[26%] top-[40%] w-[80%] md:w-[60%] left-[10%]"
           />
           <img
             src={star}
@@ -1047,7 +1071,7 @@ function Sections() {
           />
         </div>
       </div>
-      <div className="text-white pt-24 pb-10 bg-secondary-50 px-9 lg:px-36">
+      <div className="text-white pt-24 pb-10 bg-secondary-50 px-9 md:mt-40 lg:mt-0 lg:px-36">
         <div className="lg:grid lg:grid-cols-10 ">
           <div className="col-span-5 lg:w-[80%] mb-6 lg:mb-0">
             <p className="lg:text-3xl text-xl font-bold mb-3">

@@ -8,6 +8,17 @@
   @apply bg-gradient-to-r from-primary  to-secondary-200
 }
 
+.navt a.active{
+  @apply bg-none
+}
+
 body{
   @apply bg-secondary-100
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+
