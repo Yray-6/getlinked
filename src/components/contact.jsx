@@ -6,8 +6,54 @@ import purple from "../assets/images/Purple-Lens-Flare-PNG.png";
 import starsmall from "../assets/images/sata gra.png";
 import starsmaller from "../assets/images/star pu.png";
 import star from "../assets/images/star.png";
+import { useState } from "react";
+import axios from 'axios';
+
 
 export default function Contact() {
+
+    const [firstName,setFirstName] = useState('');
+    const [email,setEmail] = useState('');
+    const [phoneNumber,setPhoneNumber] = useState('');
+    const [message,setMessage] = useState('');
+
+    const handleSubmit = async (e) =>{
+      e.preventDefault();
+
+      try{
+
+      const requestBody = {
+          "email":email,
+          "phone_number":phoneNumber,
+          "first_name": firstName,
+          "message": message
+      }
+
+      const headers = {
+        'Content-Type':'application/json'
+      }
+
+      const response = await axios.post('{{baseUrl}}/hackathon/contact-form',requestBody,{headers});
+
+        if(response.status==200){
+          setEmail('');
+          setFirstName('');
+          setPhoneNumber('');
+          setMessage('');
+
+          alert('form submitted successfully');
+        }
+        else{
+          console.error('Error submitting form:', response.statusText);
+          alert('An error occurred while submitting the form. Please try again later.');
+        }
+      }
+      catch(error){
+        console.error('Error submitting form:', error);
+        alert('An error occurred while submitting the form. Please try again later.');
+      }
+    }
+
   return (
     <>
       <div className="lg:grid grid-cols-12 text-white hidden pt-32 px-48">
@@ -59,19 +105,32 @@ export default function Contact() {
                 type="text"
                 className="mt-5 w-[100%] bg-secondary-500 py-2 px-3 text-white border "
                 placeholder="First Name"
+                value={firstName}
+                onChange={(e)=>setFirstName(e.target.value)}
               />
               <input
                 type="text"
                 className="mt-9 w-[100%] bg-secondary-500 py-2 px-3 text-white border "
                 placeholder="Mail"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
+              />
+              <input
+                type="text"
+                className="mt-9 w-[100%] bg-secondary-500 py-2 px-3 text-white border "
+                placeholder="Phone"
+                value={phoneNumber}
+                onChange={(e)=>setPhoneNumber(e.target.value)}
               />
               <textarea
                 type="text"
                 className="mt-9 w-[100%] bg-secondary-500 py-1 h-28 px-3 text-white border "
                 placeholder="Message"
+                value={message}
+                onChange={(e)=>setMessage(e.target.value)}
               />
               <p className="text-center">
-                <button className=" px-12 font-semibold py-3 primarys text-sm mt-8 rounded-sm">
+                <button onClick={handleSubmit} className=" px-12 font-semibold py-3 primarys text-sm mt-8 rounded-sm">
                   Submit
                 </button>
               </p>
