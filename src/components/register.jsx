@@ -20,7 +20,7 @@ export default function Register() {
         e.preventDefault();
    
 
-      if(privacyPolicy){
+      if(privacyPolicy && email && phoneNumber && teamName && groupSize && projectTopic && category){
         try{
 
           const responseData={
@@ -36,8 +36,10 @@ export default function Register() {
           const headers ={
           'Content-Type':'application/json'
           }
-    
-          const response = await axios.post('{{baseUrl}}/hackathon/contact-form',responseData,{headers});
+          
+          const baseUrl = 'https://backend.getlinked.ai';
+          
+          const response = await axios.post(`${baseUrl}/hackathon/registration`,responseData,{headers});
 
           if(response.status==200){
             setEmail('');
@@ -56,7 +58,7 @@ export default function Register() {
           }
       }
       catch(e){
-        console.error('an error occured',e);
+        console.error('an error occurred',e);
         alert('An error occurred while submitting the form. Please try again later.');
       }
     }

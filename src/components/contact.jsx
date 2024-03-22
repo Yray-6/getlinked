@@ -33,7 +33,9 @@ export default function Contact() {
         'Content-Type':'application/json'
       }
 
-      const response = await axios.post('{{baseUrl}}/hackathon/contact-form',requestBody,{headers});
+      const baseUrl = 'https://backend.getlinked.ai';
+
+      const response = await axios.post(`${baseUrl}/hackathon/contact-form`,requestBody,{headers});
 
         if(response.status==200){
           setEmail('');
@@ -100,7 +102,7 @@ export default function Contact() {
             <p className=" text-secondary-300 text-lg font-bold ">
               Questions or need assistance? <br /> Let us know about it!
             </p>
-            <form action="">
+            <form onSubmit={handleSubmit}>
               <input
                 type="text"
                 className="mt-5 w-[100%] bg-secondary-500 py-2 px-3 text-white border "
@@ -130,7 +132,7 @@ export default function Contact() {
                 onChange={(e)=>setMessage(e.target.value)}
               />
               <p className="text-center">
-                <button onClick={handleSubmit} className=" px-12 font-semibold py-3 primarys text-sm mt-8 rounded-sm">
+                <button type="submit" className=" px-12 font-semibold py-3 primarys text-sm mt-8 rounded-sm">
                   Submit
                 </button>
               </p>
